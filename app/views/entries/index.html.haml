@@ -15,4 +15,6 @@
             %td
                 #{entry.title}
             %td
-                = link_to "詳細", entry_path(entry)
+                = link_to "コメントを表示", entry_path(entry)
+%hr/
+= link_to "UnapprovedのコメントがあるEntryを表示", show_unapproved_entries_path

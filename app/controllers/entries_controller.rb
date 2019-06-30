@@ -7,4 +7,12 @@ class EntriesController < ApplicationController
     def show
         @entry = Entry.find(params[:id])
     end
+
+    def show_unapproved
+        @entries = []
+        Entry.all.each do |entry|
+            @entries.push(entry) if entry.comments.exists?(status: "unapproved")
+        end
+    end
+
 end

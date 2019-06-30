@@ -1,0 +1,6 @@
+%h1 Unapporvedを含むエントリー
+%hr/
+- @entries.each do |entry|
+    #{entry.title}
+%hr/
+= link_to "戻る", root_path
