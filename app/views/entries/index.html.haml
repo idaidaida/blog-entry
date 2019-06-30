@@ -1,0 +1,18 @@
+%h1 Entry list
+%hr/
+%table
+    %tr
+        %td
+            No
+        %td
+            title
+        %td
+            opration
+    - @entries.each do |entry|
+        %tr
+            %td
+                #{entry.id}
+            %td
+                #{entry.title}
+            %td
+                = link_to "詳細", entry_path(entry)

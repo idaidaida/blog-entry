@@ -1,0 +1,16 @@
+%h1 Entry Detail
+%hr/
+%table
+    %tr
+        %td
+            タイトル
+        %td
+            #{@entry.title}
+    - @entry.comments.each do |comment|
+        %tr
+            %td
+                コメント_#{comment.id}
+            %td
+                #{comment.body}
+%hr/
+= link_to "戻る", root_path
